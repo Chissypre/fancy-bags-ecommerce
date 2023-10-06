@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fancy-bags-ecommerce/static/css/main.d9afa854.css",
+    "main.js": "/fancy-bags-ecommerce/static/js/main.04f3f7d3.js",
+    "static/media/2.png": "/fancy-bags-ecommerce/static/media/2.917b7d841900cf2f1715.png",
+    "static/media/1.png": "/fancy-bags-ecommerce/static/media/1.f578c7c23ee54a1f27ca.png",
+    "index.html": "/fancy-bags-ecommerce/index.html",
+    "main.d9afa854.css.map": "/fancy-bags-ecommerce/static/css/main.d9afa854.css.map",
+    "main.04f3f7d3.js.map": "/fancy-bags-ecommerce/static/js/main.04f3f7d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9afa854.css",
+    "static/js/main.04f3f7d3.js"
+  ]
+}
