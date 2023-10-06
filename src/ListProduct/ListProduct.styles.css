@@ -1,0 +1,60 @@
+
+:root{
+    --MAIN:#244d4d;
+    --HOVER:#EDBE9D;
+      
+}
+ 
+  .products-container .box {
+   border:.1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background:#f9f9f9;
+    flex:1 1 30rem; 
+  
+
+  }
+  
+   .products-container .box .content{
+    padding:10px;
+  }
+  
+   .products-container .box img{
+    height:20rem; 
+    filter:drop-shadow(0 .5rem 1rem rgba(0,0,0,.1));
+    align-items: center;
+  }
+  
+   .products-container .box:hover img{
+    cursor: pointer;
+  }
+  
+  
+  .products-container .box .content h3,small{
+    color:var(--MAIN);
+    font-size: 1.5rem;
+  }
+  
+   .products-container .box .content .price{
+    color:var(--MAIN);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding:1rem 0;
+  }
+  
+   .products-container .box .content .past-price{
+    color:RED;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+  }
+  
+   .products-container .box .content .stars{
+    padding-bottom: 1rem;
+  }
+  
+   .products-container .box .content .stars i{
+    font-size: 1.7rem;
+    color:var(--HOVER);
+  } 
