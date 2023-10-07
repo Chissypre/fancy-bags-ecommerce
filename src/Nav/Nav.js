@@ -3,31 +3,32 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
-    <div>
-    <nav className="nav-links-container">
-          <Link className="nav-link" to="/">
+    <>
+    <nav className="navbar">
+          <Link className='active' to="/">
             Home
           </Link>
-          <Link className="nav-link" to="/About">
+          <Link  to="/About">
             About
           </Link>
-          <Link className="nav-link" to="/product">
+          <Link  to="/product">
             Shop
           </Link>
-          <Link className="nav-link" to="/Blogs">
+          <Link to="/Blogs">
             Blogs
           </Link>
-          <Link className="nav-link" to="/Contact">
+          <Link  to="/Contact">
             Contact
           </Link>
-          <Link className="nav-link" to="/AddCart">
+          <Link  to="/AddCart">
             AddCart
           </Link>
-          <Link className="nav-link" to="/SignIn">
+          <Link to="/SignIn">
             SignIn
           </Link>
         </nav>
-        </div>
+        </>
+
   )
 }
 
