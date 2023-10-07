@@ -5,8 +5,7 @@ import ProductLists from '../ProductLists/ProductLists'
 const Home = ({ products }) => {
     return (
         
-        <main className="Home">
-           
+        <main className="Homepage">
             {products.length ? (
                 <ProductLists products={products} />
             ) : (

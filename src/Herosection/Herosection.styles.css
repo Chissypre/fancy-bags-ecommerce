@@ -1,0 +1,77 @@
+.home{
+  padding:0;
+  position:relative;
+  display: flex;
+  background-color: #244d4d;
+  max-height: 700px;
+}
+.home .slide{
+  background-color: pink;
+  max-width: 700px;
+  max-height: 700px;
+  flex:1 1 10rem; 
+  align-items: center;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  padding:2% 3%;
+  height:clamp(50%, 75%, 100%);
+  width:clamp(50%, 75%, 100%);
+}
+ .slide .content{
+  animation:fade 1s ease-in-out;
+}
+@keyframes fade{
+  from{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+    to{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  .home .slide .content span{
+    font-size: 1rem;
+    color:var(--MAIN);
+    font-size:clamp(.5rem, 1rem, 1rem); 
+  }
+  
+  .home  .slide .content h3{
+    font-size: 3rem;
+    color:var(--MAIN);
+    font-size:clamp(1.5rem, 2.5rem, 3rem); 
+  
+  }
+  
+  .home  .slide .content p{
+    font-size: 1rem;
+    font-size:clamp(1.2rem, 1.4rem, 1.5rem); 
+    color:var(--MAIN);
+    padding:.5rem 0;
+  }
+  .home .slide .content .action{
+    color: var(--MAIN);
+  }
+  .home .slide .content .action span{
+    font-size: 1.6rem;
+    color: var(--MAIN);
+    font-weight: 900;
+  }
+  
+  .home .slide .content .button{
+   
+    background-color:#244d4d;
+    padding: 10px 60px;
+    border-radius: 10px;
+    color:pink;
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 1.2rem;
+
+  }
+  .home .image{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  

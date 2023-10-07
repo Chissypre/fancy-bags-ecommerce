@@ -62,6 +62,7 @@ function App() {
       instock: 53,
       imgSrc: bag6Image,
     },
+    
   ])
   const navigate = useNavigate();
   
@@ -79,8 +80,8 @@ function App() {
         </Route>     
         <Route path="Blogs" element={<Blogs/>} />
         <Route path="Contact" element={<Contact/>} />
-        <Route path="AddCart" element={<AddCart/>} />
         <Route path="SignIn" element={<SignIn/>} />
+        <Route path="AddCart" element={<AddCart/>} />
         <Route path="*" element={<Missing/>} />
         </Route>
       </Routes>
