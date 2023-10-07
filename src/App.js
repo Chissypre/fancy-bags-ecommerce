@@ -1,12 +1,22 @@
 import { useState } from 'react';
-import ProductLists from './ProductLists/ProductLists';
+import Layout from './Layout/Layout';
+import Home from './Home/Home';
+import About from './About/About'
+import Blogs from './Blogs/Blogs';
+import Contact from './Contact/Contact';
+import AddCart from './AddCart/AddCart';
+import SignIn from './SignIn/SignIn'
+import ProductPage from './ProductPage/ProductPage';
+import Shop from './Shop/Shop'
 import bag1Image from './images/BAG 1/1.png';
 import bag2Image from './images/BAG 2/2.png';
 import bag3Image from './images/BAG 3/2.png';
 import bag4Image from './images/BAG 4/1.png';
 import bag5Image from './images/BAG 5/1.png';
 import bag6Image from './images/BAG 6/1.png';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
+import Missing from './Missing/Missing';
 
 function App() {
   const [products, setProducts] = useState([
@@ -53,11 +63,29 @@ function App() {
       imgSrc: bag6Image,
     },
   ])
+  const navigate = useNavigate();
+  
   return (
     <div className="App">
-     <ProductLists
-     products={products}
-     />
+      <Routes>
+      <Route path="/" element={<Layout/>}>
+          <Route index element={<Home products={products} />}/> 
+        <Route path="About" element={<About/>} />
+        <Route path="product">
+         {  <Route index element={<Shop
+          />}/> }
+        <Route path="/product/:id" element={<ProductPage
+          />}/>
+        </Route>     
+        <Route path="Blogs" element={<Blogs/>} />
+        <Route path="Contact" element={<Contact/>} />
+        <Route path="AddCart" element={<AddCart/>} />
+        <Route path="SignIn" element={<SignIn/>} />
+        <Route path="*" element={<Missing/>} />
+        </Route>
+      </Routes>
+
+    
     </div>
   );
 }

@@ -1,8 +1,11 @@
 import './ListProduct.styles.css'
+import { Link } from 'react-router-dom'
 
 const ListProduct = ({product}) => {
+  
   const { name, price, } = product
     return (
+      <Link to={`product/${product.id}`}>
       <div className="products-container">
     
       <div className="box">
@@ -27,6 +30,7 @@ const ListProduct = ({product}) => {
         </div>
     </div>
     </div>
+    </Link>
     )
   }
   
