@@ -4,7 +4,7 @@
     text-align: center;
     padding: 20px;
     flex-grow: 1;
-    height: 100vh;
+    height: 100%;
   }
 
   .Missing h2 {

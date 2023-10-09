@@ -5,7 +5,7 @@ import About from './About/About'
 import Blogs from './Blogs/Blogs';
 import Contact from './Contact/Contact';
 import AddCart from './AddCart/AddCart';
-import SignIn from './SignIn/SignIn'
+import Authentication from './Authentication/Authentication';
 import ProductPage from './ProductPage/ProductPage';
 import Shop from './Shop/Shop'
 import bag1Image from './images/BAG 1/1.png';
@@ -80,7 +80,7 @@ function App() {
         </Route>     
         <Route path="Blogs" element={<Blogs/>} />
         <Route path="Contact" element={<Contact/>} />
-        <Route path="SignIn" element={<SignIn/>} />
+        <Route path="auth" element={<Authentication/>} />
         <Route path="AddCart" element={<AddCart/>} />
         <Route path="*" element={<Missing/>} />
         </Route>

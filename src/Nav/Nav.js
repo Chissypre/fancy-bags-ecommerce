@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { BsCart2 } from "react-icons/bs";
 
 const Nav = () => {
+  const quantity = 0;
   return (
     <>
     <nav className="navbar">
@@ -24,11 +25,13 @@ const Nav = () => {
           </nav>
           <div className="navbar" style={{ justifyContent:"flex-end" }} >
           <Link  to="/AddCart">
-            <BsCart2
-            style={{ fontSize: '2rem' }}
+            <div className="cartquant">
+            <BsCart2 className='cart-icon'
             />
+             <span style={{ marginLeft: '0.5rem', color: 'red' }} className='quantity'>{quantity}</span>
+             </div>
           </Link>
-          <Link to="/SignIn">
+          <Link to="/auth">
             SignIn
           </Link>
           </div>

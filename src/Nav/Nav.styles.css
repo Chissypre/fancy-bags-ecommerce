@@ -31,5 +31,26 @@
     bottom: -4px;
     left: 20px;
   }
+ /* CartIconWithQuantity.css */
+
+.cartquant {
+  display: flex;
+  align-items: center; 
   
+  
+}
+
+.cart-icon {
+  font-size: 3rem;
+  
+}
+
+.quantity {
+  color: red;
+  margin-bottom: .5rem;
+   transform: translateY(20%);
+   transform: translateX(-380%); 
+   font-size: 1rem;
+}
+ 
  

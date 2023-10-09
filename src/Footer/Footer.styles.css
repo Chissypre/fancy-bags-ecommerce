@@ -1,10 +1,10 @@
  .footer .box-container{
-    border:.1rem solid rgba(0,0,0,.1);
-    background:var(--MAIN);
-    padding:.1rem;
-    display: flex;
-    flex-wrap: wrap;
-    max-height: 300px;
+  border:.1rem solid rgba(0,0,0,.1);
+  background:var(--MAIN);
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 300px;
+  bottom: 0;
   }
   
   .footer .box-container .box{
