@@ -1,8 +1,16 @@
 import './Nav.styles.css'
+import { useContext } from 'react';
+import { UserContext } from '../contexts/user.context';
+import { signOutUser } from '../utils/firebase/firebase.utils';
 import { Link } from 'react-router-dom';
 import { BsCart2 } from "react-icons/bs";
 
 const Nav = () => {
+  const { currentUser } = useContext(UserContext);
+
+  
+
+
   const quantity = 0;
   return (
     <>
@@ -31,9 +39,16 @@ const Nav = () => {
              <span style={{ marginLeft: '0.5rem', color: 'red' }} className='quantity'>{quantity}</span>
              </div>
           </Link>
+          {currentUser ? (
+            <Link onClick={signOutUser}>
+              {' '}
+              Sign Out{' '}
+            </Link>
+          ) : (
           <Link to="/auth">
-            SignIn
+            Sign In
           </Link>
+             )}
           </div>
         </>
 

@@ -1,4 +1,3 @@
-import './Sign-up-form.styles.scss'
 import { useState } from 'react';
 
 import FormInput from '../Form-input/Form-input';
@@ -9,7 +8,7 @@ import {
   createUserDocumentFromAuth,
 } from '../utils/firebase/firebase.utils';
 
-
+import './Sign-up-form.styles.scss';
 
 const defaultFormFields = {
   displayName: '',

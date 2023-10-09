@@ -16,11 +16,13 @@
     color: #2D2D2D;
     transition: 0.3s ease;
   }
+  
   .navbar  a:hover,
   .navbar  a.active{
     color:#40867b;
   
   }
+  
   .navbar a.active::after,
   .navbar a:hover::after{
     content: "";
