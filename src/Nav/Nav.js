@@ -1,17 +1,17 @@
 import './Nav.styles.css'
 import { useContext } from 'react';
 import { UserContext } from '../contexts/user.context';
+import { CartContext } from '../contexts/cart.context';
 import { signOutUser } from '../utils/firebase/firebase.utils';
 import { Link } from 'react-router-dom';
-import { BsCart2 } from "react-icons/bs";
+import AddCart from '../AddCart/AddCart';
+import CartDropdown from '../Cart-Dropdown/Cart-Dropdown';
+
 
 const Nav = () => {
   const { currentUser } = useContext(UserContext);
+  const { isCartOpen } = useContext(CartContext);
 
-  
-
-
-  const quantity = 0;
   return (
     <>
     <nav className="navbar">
@@ -32,13 +32,6 @@ const Nav = () => {
           </Link>
           </nav>
           <div className="navbar" style={{ justifyContent:"flex-end" }} >
-          <Link  to="/AddCart">
-            <div className="cartquant">
-            <BsCart2 className='cart-icon'
-            />
-             <span style={{ marginLeft: '0.5rem', color: 'red' }} className='quantity'>{quantity}</span>
-             </div>
-          </Link>
           {currentUser ? (
             <Link onClick={signOutUser}>
               {' '}
@@ -49,6 +42,10 @@ const Nav = () => {
             Sign In
           </Link>
              )}
+           <AddCart/>
+          <div>
+          {isCartOpen && <CartDropdown />}
+          </div>
           </div>
         </>
 

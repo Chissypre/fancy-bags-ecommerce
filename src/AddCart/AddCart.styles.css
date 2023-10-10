@@ -1,0 +1,25 @@
+
+.cartquant {
+    display: flex;
+    align-items: center; 
+     
+  }
+  
+  .cart-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    
+  }
+  .cart-icon:hover{
+    color: #40867b;
+  }
+  
+  .quantity {
+    color: red;
+    margin-bottom: 1rem;
+     transform: translateY(50%);
+     transform: translateX(-380%); 
+     font-size: 1rem;
+  }
+   
+   
