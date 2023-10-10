@@ -8,6 +8,7 @@ import AddCart from './AddCart/AddCart';
 import Authentication from './Authentication/Authentication';
 import ProductPage from './ProductPage/ProductPage';
 import Shop from './Shop/Shop'
+import Checkout from './Checkout/Checkout';
 import bag1Image from './images/BAG 1/1.png';
 import bag2Image from './images/BAG 2/2.png';
 import bag3Image from './images/BAG 3/2.png';
@@ -82,6 +83,7 @@ function App() {
         <Route path="Contact" element={<Contact/>} />
         <Route path="auth" element={<Authentication/>} />
         <Route path="AddCart" element={<AddCart/>} />
+        <Route path="Checkout" element={<Checkout/>} />
         <Route path="*" element={<Missing/>} />
         </Route>
       </Routes>

@@ -1,13 +1,18 @@
 import './ProductCard.styles.css';
 import { Link } from 'react-router-dom';
-
+import { useContext } from 'react';
+import { CartContext } from '../contexts/cart.context';
 import Button from '../Button/Button';
 
 const ProductCard = ({ product }) => {
   const { name, price, } = product;
+  const { addItemToCart } = useContext(CartContext);
+  const addProductToCart = () => addItemToCart(product);
   return (
-    <Link to={`product/${product.id}`}>
     <div className="products-container">
+    <>
+    <Link to={`product/${product.id}`}>
+   
   
     <div className="box">
      
@@ -25,13 +30,13 @@ const ProductCard = ({ product }) => {
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
               <i className="fas fa-star"></i>
-             
-          </div>
-          <Button buttonType='inverted'>add to cart</Button>
-      </div>
-  </div>
-  </div>
+          </div> 
+      </div>  
+  </div> 
   </Link>
+  <Button buttonType='inverted' onClick={addProductToCart}>add to cart</Button>
+  </>
+  </div>
   )
 };
 
