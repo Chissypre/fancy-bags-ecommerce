@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { UserProvider } from './contexts/user.context';
-import { ProductsProvider } from './contexts/products.context';
+import { CollectionsProvider } from './contexts/collections.context';
 import { CartProvider } from './contexts/cart.context';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -13,11 +13,11 @@ root.render(
   <React.StrictMode>
   <BrowserRouter basename='/fancy-bags-ecommerce'>
   <UserProvider>
-        <ProductsProvider>
+        <CollectionsProvider>
         <CartProvider>
           <App />
           </CartProvider>
-        </ProductsProvider>
+        </CollectionsProvider>
       </UserProvider>
   </BrowserRouter>
 </React.StrictMode>

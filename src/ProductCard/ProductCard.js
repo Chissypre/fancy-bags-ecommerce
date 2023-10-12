@@ -5,7 +5,7 @@ import { CartContext } from '../contexts/cart.context';
 import Button from '../Button/Button';
 
 const ProductCard = ({ product }) => {
-  const { name, price, } = product;
+  const { name, price, imgSrc } = product;
   const { addItemToCart } = useContext(CartContext);
   const addProductToCart = () => addItemToCart(product);
   return (
@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
     <div className="box">
      
        <img
-          src={product.imgSrc}
+          src={imgSrc}
           alt={` ${product.id}`}
         />
     

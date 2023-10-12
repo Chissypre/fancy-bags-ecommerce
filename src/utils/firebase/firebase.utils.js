@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+import { getStorage } from "firebase/storage";
 import {
   getAuth,
   signInWithRedirect,
@@ -8,8 +9,9 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+
 } from 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+import { getFirestore, doc, getDoc, setDoc, collection, writeBatch, query, getDocs } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyD5isUoTr3I2lphSGLQ7iUfIbvjNeVRsPY",
@@ -22,6 +24,7 @@ const firebaseConfig = {
 
 
 const firebaseApp = initializeApp(firebaseConfig);
+export const storage = getStorage(firebaseApp );
 
 const googleProvider = new GoogleAuthProvider();
 
@@ -36,6 +39,36 @@ export const signInWithGoogleRedirect = () =>
   signInWithRedirect(auth, googleProvider);
 
 export const db = getFirestore();
+
+//TO ADD DATABASE TO FIRESTORE DATABASE
+export const addCollectionAndDocuments = async(collectionKey, objectsToAdd) =>{
+const collectionRef = collection(db, collectionKey)
+const batch =writeBatch(db)
+objectsToAdd.forEach((object) => {
+  const docRef = doc(collectionRef, object.title.toLowerCase());
+  batch.set(docRef, object);
+});
+
+await batch.commit();
+console.log('done');
+};
+
+//TO GET DATA FROM ALREADY ADDED DATABASE ON FIREBASE DATABASE
+export const getProductsAndDocuments = async () => {
+  const collectionRef = collection(db, 'collections');
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+  const collectionMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+  }, {});
+
+  return collectionMap;
+}
+
+
 
 export const createUserDocumentFromAuth = async (
   userAuth,

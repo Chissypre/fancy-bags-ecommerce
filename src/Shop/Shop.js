@@ -3,22 +3,31 @@ import { useContext } from 'react';
 
 import ProductCard from '../ProductCard/ProductCard';
 
-import { ProductsContext } from '../contexts/products.context';
+import { CollectionsContext } from '../contexts/collections.context';
 
 import './Shop.styles.css';
 
 const Shop = () => {
-  const { products } = useContext(ProductsContext);
+  const { collectionsMap} = useContext(CollectionsContext);
 
   return (
-    <div className='products'>
-{products.map((product) => (
+    <>
+    {
+      Object.keys(collectionsMap).map((title) => (
+        <>
+        <div className='products'>
+ {collectionsMap[title].map((product) => (
         <ProductCard
           key={product.id}
           product={product}
         />
-      ))}
+        
+      ))} 
     </div>
+        </>
+      ))}
+
+    </>
   );
 };
 
