@@ -1,20 +1,27 @@
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
-  .navbar a{
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
+    justify-content:center;
+    max-height: fit-content;
+  z-index: 1000;
+  margin-bottom: 0;
   
+  
+    
+    
   }
+ 
   .navbar a{
     text-decoration: none;
     font-size:1.3rem;
     font-weight: 700;
     color: #2D2D2D;
     transition: 0.3s ease;
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+  
+    
   }
   
   .navbar  a:hover,

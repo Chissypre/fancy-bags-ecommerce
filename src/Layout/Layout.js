@@ -1,6 +1,7 @@
  
 import './Layout.styles.css'
 import Header from '../Header/Header';
+import Nav from '../Nav/Nav'
 import Herosection from '../Herosection/Herosection'; 
 import Footer from '../Footer/Footer';
 import { Outlet, useLocation } from 'react-router-dom';
@@ -14,9 +15,12 @@ const Layout = () => {
     
     <div className="layout">
       <Header />
+     <Nav/>
+     
       {isHomePage && <Herosection />}
       <Outlet/>
       <Footer />
+     
       </div>
   )
 }

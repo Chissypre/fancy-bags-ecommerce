@@ -1,0 +1,105 @@
+:root{
+  --MAIN:#244d4d;
+  --HOVER:#EDBE9D;
+    
+}
+
+/*single product*/
+.prodetails .single-pro-details h2 {
+  font-size: 2rem;
+}
+.prodetails h4{
+  font-size: 1.5rem;
+}
+.prodetails h6{
+  font-size: 1.5rem;
+}
+ .single-pro-details span{
+  font-size: 1rem;
+}
+.section-p1, .quant {
+  padding: 40px 60px;
+}
+
+.prodetails{
+  display: flex;
+  margin-top:0;
+  margin: 5px;
+}
+.prodetails .single-pro-image{
+  width: 50%;
+  margin-right: 50px;
+  margin-top: 0;
+ 
+}
+.prodetails .small-pro-image{
+  width: 100%;
+
+ 
+}
+.small-img-group{
+  display: flex;
+  justify-content:space-between;
+  
+}
+.small-img-col{
+  flex-basis: 50%;
+  cursor: pointer;
+  background-color: whitesmoke;
+  box-shadow:  .1rem .1rem rgba(.1,.1,.1,.1);
+  padding: 1rem 2rem;
+  margin: .1rem;
+}
+.prodetails .single-pro-details{
+  width: 50%;
+  padding: 5px 40px;
+  margin: 20px 0;
+}
+.prodetails .single-pro-details h4{
+  padding: 5px 0;
+}
+.prodetails .single-pro-details h2{
+ font-size: 26px;
+}
+.prodetails .single-pro-details select{
+  display: block;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.prodetails .single-pro-details input{
+  width: 50px;
+  height: 27px;
+  font-size: 16px;
+}
+.prodetails .single-pro-details input:focus{
+  outline: none;
+}
+.prodetails .single-pro-details button{
+  background: #088178;
+  color: white;
+  margin: 20px 0;
+}
+.prodetails .single-pro-details .price{
+  color:var(--MAIN);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding:1rem 0;
+}
+
+.prodetails .single-pro-details .past-price{
+  color:RED;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+.prodetails .single-pro-details .quantity{
+  padding: 5px;
+  color:#088178;
+  font-weight: 900;
+
+}
+.prodetails .single-pro-details span{
+  line-height: 15px;
+}
+.quant{
+  display: flex;
+}

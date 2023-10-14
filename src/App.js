@@ -58,7 +58,7 @@ function App() {
       imgSrc:'https://firebasestorage.googleapis.com/v0/b/fancy-bags-ecommerce.appspot.com/o/images%2F2.png8c617d2d-720f-4da4-9688-87e24669e876?alt=media&token=d0c45df0-6da9-47cf-b6c1-7c0700606a49&_gl=1*5nz7dl*_ga*NDg3NzA0OTQ0LjE2OTUzMDIyNjE.*_ga_CW55HF8NVT*MTY5NzA2MTMxMS4yMi4xLjE2OTcwNjc4NjMuMzMuMC4w',
     },
     
-  ])
+  ]) 
   
   
   return (
@@ -70,7 +70,7 @@ function App() {
         <Route path="product">
          {  <Route index element={<Shop
           />}/> }
-        <Route path="/product/:id" element={<ProductPage
+        <Route path=":id" element={<ProductPage
           />}/>
         </Route>     
         <Route path="Blogs" element={<Blogs/>} />

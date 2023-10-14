@@ -11,7 +11,7 @@
   position: relative;
   overflow: hidden;
   background:#f9f9f9;
-  flex:1 1 30rem; 
+   flex:1 1 30rem;  
 
 
 }
@@ -21,7 +21,7 @@
 }
 
  .products-container .box img{
-  height:20rem; 
+  height:10rem; 
   filter:drop-shadow(0 .5rem 1rem rgba(0,0,0,.1));
   align-items: center;
 }
@@ -40,7 +40,7 @@
   color:var(--MAIN);
   font-size: 1.5rem;
   font-weight: bolder;
-  padding:1rem 0;
+  padding:.5rem 0;
 }
 
  .products-container .box .content .past-price{
