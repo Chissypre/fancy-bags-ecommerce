@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fancy-bags-ecommerce/static/css/main.96af455c.css",
-    "main.js": "/fancy-bags-ecommerce/static/js/main.29636fa9.js",
+    "main.css": "/fancy-bags-ecommerce/static/css/main.129d76fc.css",
+    "main.js": "/fancy-bags-ecommerce/static/js/main.cd11fdba.js",
     "static/media/hand-heart-love-svgrepo-com.svg": "/fancy-bags-ecommerce/static/media/hand-heart-love-svgrepo-com.aa60eeb66149f3493125e5d42e16fd2b.svg",
     "static/media/LogoHead.svg": "/fancy-bags-ecommerce/static/media/LogoHead.dd70700c1979d71dc51c999250eb5d95.svg",
     "index.html": "/fancy-bags-ecommerce/index.html",
-    "main.96af455c.css.map": "/fancy-bags-ecommerce/static/css/main.96af455c.css.map",
-    "main.29636fa9.js.map": "/fancy-bags-ecommerce/static/js/main.29636fa9.js.map"
+    "main.129d76fc.css.map": "/fancy-bags-ecommerce/static/css/main.129d76fc.css.map",
+    "main.cd11fdba.js.map": "/fancy-bags-ecommerce/static/js/main.cd11fdba.js.map"
   },
   "entrypoints": [
-    "static/css/main.96af455c.css",
-    "static/js/main.29636fa9.js"
+    "static/css/main.129d76fc.css",
+    "static/js/main.cd11fdba.js"
   ]
 }
