@@ -1,9 +1,10 @@
 .home{
-  padding:0;
+  padding:10px;
   position:relative;
   display: flex;
   background-color: #244d4d;
   max-height: 700px;
+ 
 }
 .home .slide{
   background-color: pink;

@@ -3,13 +3,18 @@ import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../contexts/cart.context';
 import Button from '../Button/Button';
+import RatingStars from '../RatingStars/RatingStars';
 
 const ProductPageCard = ({ product }) => {
-
+  const [rating, setRating] = useState(3.5);
   const navigate = useNavigate()
   const goToShopPage = () => {
     navigate('/product');
   };
+  const goToCheckoutPage = () => {
+    navigate('/Checkout');
+  };
+
   const {name, price, imgSrc, imgSrc2, imgSrc3, imgSrc4, productd, instock} = product;
   const [mainImage, setMainImage] = useState(imgSrc);
   const handleSmallImageClick = (imgSrc) => {
@@ -27,30 +32,31 @@ const ProductPageCard = ({ product }) => {
     <div className="small-img-group">
         <div className="small-img-col">
         <img className="small-pro-image"
-            src={imgSrc2}
+            src={imgSrc2 || imgSrc}
             alt={` ${product.id}`}
-            onClick={() => handleSmallImageClick(imgSrc2)}
+            onClick={() => handleSmallImageClick(imgSrc2 || imgSrc)}
           />
         </div>
         <div className="small-img-col">
         <img
         className="small-pro-image"
-            src={imgSrc3}
+            src={imgSrc3 || imgSrc}
             alt={` ${product.id}`}
-            onClick={() => handleSmallImageClick(imgSrc3)}
+            onClick={() => handleSmallImageClick(imgSrc3 || imgSrc)}
           />
         </div>
         
        { <div className="small-img-col">
         <img
         className="small-pro-image"
-            src={imgSrc4}
+            src={imgSrc4 || imgSrc}
             alt={` ${product.id}`}
-            onClick={() => handleSmallImageClick(imgSrc4)}
+            onClick={() => handleSmallImageClick(imgSrc4 || imgSrc)}
           />
            </div>}
     </div> 
     </div>
+    
     <div className="single-pro-details">
     <h4>{name}</h4>
         <span class="quantity">Quantity: {cartCount}</span>
@@ -58,13 +64,19 @@ const ProductPageCard = ({ product }) => {
     <span class="quantity">Instock: {instock}</span>
   <br />
     <small>$</small><span className="price">{price}</span> <span className="past-price">150.99</span>
+    
+               <RatingStars rating={rating}  />  
+              
     <Button buttonType='inverted' onClick={addProductToCart}>Add to cart</Button>
     
     <h4>Product Details</h4>
     <span>
        {productd}
     </span>
-    <Button onClick={goToShopPage}>VIEW MORE</Button>
+    <div className='btnhs'>
+    <Button onClick={goToCheckoutPage}>CHECKOUT</Button>
+    <Button onClick={goToShopPage}> GO TO SHOP PAGE</Button>
+    </div>
     </div>
     
 </section>

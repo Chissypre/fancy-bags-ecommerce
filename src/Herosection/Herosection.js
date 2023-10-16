@@ -24,7 +24,7 @@ const Herosection = () => {
                       </div>
                       
                       <Link  to="/product">
-          <button className='button'>Shop</button> 
+          <button className='button'>Shop Now </button> 
           </Link>
             </div>       
     </div>
