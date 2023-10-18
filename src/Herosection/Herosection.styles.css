@@ -89,3 +89,41 @@
       width: 55%;
     }
   }
+   @media (max-width: 831px) {
+    .home{
+     flex-direction: column;
+     min-height: 800px;
+    
+    } 
+    .home .slide{
+     max-width: 100%;
+    min-height: 400px;
+     
+     }
+     .home .image{
+   width: 100%;
+    } 
+    }
+   @media (max-width: 721px) {
+    
+    .home .slide{
+     max-width: 100%;
+    min-height: 500px;
+     
+     }
+     .home .image{
+      width: 100%;
+       } 
+    
+    }
+   @media (max-width: 388px) {
+    
+    .home .slide{
+     max-width: 100%;
+    min-height: 600px;
+     
+     }
+     .home .image{
+      width: 100%;
+       } 
+    }

@@ -1,6 +1,6 @@
 .aboutdiv{
     flex-grow: 1;
-   height: 100vh;
+   height: 100%;
 }
 
   .about {
@@ -28,7 +28,7 @@
   }
   
   
-  /* Responsive Styles */
+  
   @media (max-width: 768px) {
     .about {
       padding: 10px;

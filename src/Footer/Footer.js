@@ -25,20 +25,14 @@ const Footer = () => {
           <Link  to="/Contact">
             Contact
           </Link>
-          <Link  to="/AddCart">
-            AddCart
-          </Link>
-          <Link to="/SignIn">
-            SignIn
-          </Link>
         </div>
 
         <div class="box">
             <h3>extra links</h3>
-          <Link  to="/myaccount">
+          <Link  to="/SignIn">
             My Account
           </Link>
-          <Link  to="/orders">
+          <Link  to="/Checkout">
             My Orders
           </Link>
           <Link to="/Newsletter">

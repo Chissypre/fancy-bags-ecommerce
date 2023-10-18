@@ -118,4 +118,9 @@
     color:red;
     text-decoration: line-through;
   }
-  
+  @media (max-width:678px) {
+    .featured .row{
+      width: 100%;
+      margin: auto;
+    }
+  }
