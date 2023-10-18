@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fancy-bags-ecommerce/static/css/main.acae3515.css",
-    "main.js": "/fancy-bags-ecommerce/static/js/main.14585031.js",
+    "main.css": "/fancy-bags-ecommerce/static/css/main.f4bfa3c3.css",
+    "main.js": "/fancy-bags-ecommerce/static/js/main.b9c82e35.js",
     "static/media/BAG_peach.png": "/fancy-bags-ecommerce/static/media/BAG_peach.ea6205fe3fb49b2f447e.png",
     "static/media/BAG3_pinks.png": "/fancy-bags-ecommerce/static/media/BAG3_pinks.b56803ec1c18e8148622.png",
     "static/media/BAGS_purple.png": "/fancy-bags-ecommerce/static/media/BAGS_purple.48fb5b1f51111ee864fd.png",
@@ -13,14 +13,16 @@
     "static/media/BAG_pink.png": "/fancy-bags-ecommerce/static/media/BAG_pink.e5fddfdc00884409d87a.png",
     "static/media/BAG3_black.png": "/fancy-bags-ecommerce/static/media/BAG3_black.02ddb934a8d2248230b7.png",
     "static/media/BAG_silver.png": "/fancy-bags-ecommerce/static/media/BAG_silver.5e282556db5b23410f2f.png",
+    "static/media/2nd hand-heart-love-svgrepo-com -.svg": "/fancy-bags-ecommerce/static/media/2nd hand-heart-love-svgrepo-com -.3e79fa9bd241d970f497f49f3029fff7.svg",
     "static/media/hand-heart-love-svgrepo-com.svg": "/fancy-bags-ecommerce/static/media/hand-heart-love-svgrepo-com.73b5d6c757d5f732b576af84d9926e47.svg",
     "static/media/LogoHead.svg": "/fancy-bags-ecommerce/static/media/LogoHead.a6fd4b0356538332aed9970f7b963280.svg",
+    "static/media/LogoHead2.svg": "/fancy-bags-ecommerce/static/media/LogoHead2.5f25135e33afb11c60a51ffa67a4e4cd.svg",
     "index.html": "/fancy-bags-ecommerce/index.html",
-    "main.acae3515.css.map": "/fancy-bags-ecommerce/static/css/main.acae3515.css.map",
-    "main.14585031.js.map": "/fancy-bags-ecommerce/static/js/main.14585031.js.map"
+    "main.f4bfa3c3.css.map": "/fancy-bags-ecommerce/static/css/main.f4bfa3c3.css.map",
+    "main.b9c82e35.js.map": "/fancy-bags-ecommerce/static/js/main.b9c82e35.js.map"
   },
   "entrypoints": [
-    "static/css/main.acae3515.css",
-    "static/js/main.14585031.js"
+    "static/css/main.f4bfa3c3.css",
+    "static/js/main.b9c82e35.js"
   ]
 }
