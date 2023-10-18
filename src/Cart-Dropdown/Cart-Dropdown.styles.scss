@@ -1,7 +1,7 @@
 .cart-dropdown-container {
     position: absolute;
-    width: 400px;
-    height: 340px;
+    width: 380px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -12,7 +12,7 @@
     z-index: 5;
   
     .cart-items {
-      height: 240px;
+      height: 300px;
       display: flex;
       flex-direction: column;
       overflow: scroll;
@@ -22,15 +22,15 @@
       margin: 50px auto;
     }
   
-    .cart-items {
-      height: 240px;
-      display: flex;
-      flex-direction: column;
-      overflow: scroll;
-    }
-  
   
     button {
       margin-top: auto;
+    }
+  }
+  @media (max-width: 831px) {
+
+    .cart-dropdown-container {
+      top: 45px;
+      right: 10px;
     }
   }

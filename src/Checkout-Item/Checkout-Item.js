@@ -2,6 +2,8 @@ import './Checkout-Item.styles.scss'
 import { useContext } from 'react';
 
 import { CartContext } from '../contexts/cart.context';
+import { FiMinusSquare} from "react-icons/fi";
+import { FiPlusSquare} from "react-icons/fi";
 
 const CheckoutItem = ({ cartItem }) => {
   const { name, imgSrc, price, quantity } = cartItem;
@@ -19,15 +21,16 @@ const CheckoutItem = ({ cartItem }) => {
         <img src={imgSrc} alt={`${name}`} />
       </div>
       <span className='name'> {name} </span>
-      <span className='quantity'>
-        <div className='arrow' onClick={removeItemHandler}>
-          &#10094;
-        </div>
+     {/*  <div className='quantity'> */}
+        
+        <span className='arrow' onClick={removeItemHandler}>
+         <FiMinusSquare className='arrowsign'/>
+        </span>
         <span className='value'>{quantity}</span>
-        <div className='arrow' onClick={addItemHandler}>
-          &#10095;
-        </div>
-      </span>
+        <span className='arrow' onClick={addItemHandler}>
+          <FiPlusSquare className='arrowsign'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+      {/* </div> */}
       <span className='price'> {price}</span>
       <div className='remove-button' onClick={clearItemHandler}>
         &#10005;

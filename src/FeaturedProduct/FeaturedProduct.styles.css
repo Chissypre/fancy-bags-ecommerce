@@ -1,3 +1,16 @@
+.heading{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color:var(--MAIN);
+  padding:1rem;
+}
+
+.heading span{
+  text-transform: uppercase;
+  color:pink;
+  z-index: 999;
+}
 .featured .row{
     display: flex;
     flex-wrap: wrap;
@@ -7,7 +20,7 @@
     background:#f9f9f9;
     padding:1rem;
     align-items: center;
-  margin: 20px 40px;
+  margin: 20px 60px;
     min-width: 200px;
     justify-content: center;
   }
@@ -49,7 +62,7 @@
     color:var(--MAIN);
   }
   .color-content{
-    margin-top: 3.2rem;
+    margin-top: 2rem;
   }
   .color-content h3{
     text-transform: uppercase;
@@ -72,82 +85,12 @@
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
   }
-  .color2{
-    width: 35px;
-    height: 35px;
-    background: none;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    margin-right: 12px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-  }
-  .color3{
-    width: 35px;
-    height: 35px;
-    background: none;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    margin-right: 12px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-  }
-  
-  .color-pink{
-    background-color: #de8bae;
-  }
-  .color-blue{
-    background-color: #639acb;
-  }
-  .color-red{
-    background-color: #9c0e19;
-  }
-  .color-silver{
-    background-color: #b1b0ad;
-  }
-  .color-peach{
-    background-color: #9c4f59;
-  }
-  .color-blues{
-    background-color: #262d49;
-  }
-  .color-reds{
-    background-color: #b1313d;
-  }
-  .color-purple{
-    background-color: #916570;
-  }
-  .color-grey{
-    background-color: #919599;
-  }
-  .color-pinks{
-    background-color: #d3346f;
-  }
-  .color-black{
-    background-color: #1c1c1b;
-  }
-  .color:hover{
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
-  }
+
   .active-color{
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
   }
   .color-groups{
-    padding: 1rem 0;
+    padding: .7rem 0;
     display: flex;
   }
   

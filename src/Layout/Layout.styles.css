@@ -21,4 +21,10 @@ html, body {
   main{
     margin-top: 40px;
   }
-  
+  @media (max-width: 831px) {
+
+    main{
+      margin-top:0;
+    }
+  }
+ 

@@ -1,5 +1,7 @@
 import './FeaturedProduct.styles.css'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { CartContext } from '../contexts/cart.context';
+import Button from '../Button/Button';
 import RatingStars from '../RatingStars/RatingStars'
 import BAG1F1 from '../images/BAG_blue.png'
 import BAG1F2 from '../images/BAG_peach.png'
@@ -14,34 +16,44 @@ import BAG3F2 from '../images/BAG3_grey.png'
 import BAG3F3 from '../images/BAG3_pinks.png'
 
 const FeaturedProduct = () => {
+  
   const [bags, setBags] = useState([
     {
       id: 31,
       name: "Zara",
-      price: 120.99,
+      price: 12000.99,
       instock: 5,
+      imgSrc:[BAG1F1, BAG1F2, BAG1F3, BAG1F4, BAG1F5],
       colors: ['#639acb', '#9c4f59', '#de8bae', '#9c0e19', '#b1b0ad'],
       selectedColor: '#639acb', 
     },
     {
       id: 36,
       name: "Classic",
-      price: 110.99,
+      price: 11000.99,
       instock: 5,
+      imgSrc:[BAG2F1, BAG2F2, BAG2F3],
       colors: ['#262d49', '#916570', '#b1313d'],
       selectedColor: '#262d49', 
     },
     {
       id: 39,
       name: "Brandy",
-      price: 130.99,
+      price: 13000.99,
       instock: 5,
+      imgSrc:[BAG3F1, BAG3F2, BAG3F3],
       colors: ['#1c1c1b', '#919599', '#d3346f'],
       selectedColor: '#1c1c1b', 
     },
   ]);
+  const { addItemToCart } = useContext(CartContext);
+  const addProductToCart = (bag) => {
+    addItemToCart(bag);
+  };
+
 
   const [rating, setRating] = useState(3.5);
+  
 
   const handleColorClick = (bagIndex, color) => {
     // Update the selected color for the specified bag
@@ -51,9 +63,9 @@ const FeaturedProduct = () => {
       return updatedBags;
     });
   };
-
+  
   return (
-    <section className="featured" id="featured">
+    <section className="featured">
       <h1 className="heading">
         <span>featured</span> products
       </h1>
@@ -86,12 +98,10 @@ const FeaturedProduct = () => {
               </div>
             </div>
             <RatingStars rating={rating} />
-            <span className="price">{bag.price}</span>{' '}
-            <span className="past-price">$150.99</span>
+            <span className="price">₦{bag.price}</span>{' '}
+            <span className="past-price">₦15000.99</span>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="#" className="btn">
-              add to cart
-            </a>
+            <Button style={{ margin:'20px 0'}} onClick={() => addProductToCart(bag)}>add to cart</Button>
           </div>
         </div>
       ))}

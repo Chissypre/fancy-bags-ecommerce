@@ -4,7 +4,6 @@ import Header from '../Header/Header';
 import Nav from '../Nav/Nav'
 import Herosection from '../Herosection/Herosection'; 
 import FeaturedProduct from '../FeaturedProduct/FeaturedProduct';
-import Map from '../Map/Map';
 import Footer from '../Footer/Footer';
 import { Outlet, useLocation } from 'react-router-dom';
 

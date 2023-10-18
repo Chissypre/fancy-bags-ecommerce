@@ -22,5 +22,27 @@
      transform: translateX(-380%); 
      font-size: 1rem;
   }
-   
+  @media (max-width: 831px) {
+
+    .cartquant {
+      justify-content:right;
+      margin-right: 10px; 
+      margin-bottom:3px;
+    }
+    .cart-icon {
+      margin-bottom:0;
+      font-size: 2.7rem;
+      color: #40867b;
+    }
+    .quantity {
+      margin-bottom: .3rem;
+       transform: translateY(50%);
+       transform: translateX(-370%); 
+       font-size: 1rem;
+    }
+    .cart-icon:hover{
+      color: black;
+    }
+    
+  }
    

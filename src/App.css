@@ -1,12 +1,8 @@
 * {
   box-sizing: border-box;
 }
-html, body{
 
-  margin: 0;
-}
-
-/* .App{
+.App{
+  overflow:auto;
   max-width: 100%;
 }
- */

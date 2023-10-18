@@ -1,13 +1,17 @@
 import './Nav.styles.css'
 import { ReactComponent as Logo } from "../images/hand-heart-love-svgrepo-com.svg";
 import { ReactComponent as LogoHead } from "../images/LogoHead.svg";
-import { useContext } from 'react';
+import { ReactComponent as Logo2 } from "../images/2nd hand-heart-love-svgrepo-com -.svg";
+import { ReactComponent as LogoHead2 } from "../images/LogoHead2.svg";
+import { useContext , useState, useEffect} from 'react';
 import { UserContext } from '../contexts/user.context';
 import { CartContext } from '../contexts/cart.context';
 import { signOutUser } from '../utils/firebase/firebase.utils';
 import { Link } from 'react-router-dom';
 import AddCart from '../AddCart/AddCart';
 import CartDropdown from '../Cart-Dropdown/Cart-Dropdown';
+import { HiX } from 'react-icons/hi';
+import { HiMiniBars3CenterLeft } from 'react-icons/hi2';
 
 
 const Nav = () => {
@@ -30,19 +34,79 @@ const Nav = () => {
     color: '#40867b',
   };
   
-  const linkStyleAfter = {
-    content: '""',
-    width: '30%',
-    height: '2px',
-    background: '#40867b',
-    position: 'absolute',
-    bottom: '-4px',
-    left: '20px',
+
+  const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 831);
+
+  const toggleMenu = () => {
+    setOpen(!open);
   };
-  
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 831);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
 
   return (
     <>
+     {isMobile ? (
+        <div className={`mobile-nav ${open ? 'active' : ''}`}>
+          {currentUser ? (
+            <Link onClick={signOutUser} style={{textDecoration:"none", color:"#2D2D2D", alignItems:"center",fontWeight:"700", marginTop:'60px', marginLeft:'60px', fontSize:'1.3rem'}}>
+              {' '}
+              Sign Out{' '}
+            </Link>
+          ) : (
+          <Link to="/auth" style={{textDecoration:"none", color:"#244d4d", alignItems:"center", fontWeight:"700", marginLeft:'60px', marginTop:'60px', fontSize:'1.3rem'}}>
+            Sign In
+          </Link>
+             )} 
+          
+            <Link className="mobile-nav-link" to="/" onClick={toggleMenu}>
+              Home
+            </Link>
+            <Link className="mobile-nav-link" to="/About" onClick={toggleMenu}>
+              About
+            </Link>
+            <Link className="mobile-nav-link" to="/product" onClick={toggleMenu}>
+            Shop
+            </Link>
+            <Link className="mobile-nav-link" to="/Blogs" onClick={toggleMenu}>
+              Blogs
+            </Link>
+            <Link className="mobile-nav-link" to="/Contact" onClick={toggleMenu}>
+              Contact
+            </Link>
+       <div className="mobilehead">
+          <div className="mbheader">
+            <Link to="/">
+          <LogoHead2 />
+           <Logo2 />
+           </Link>
+           
+           </div>
+          <div className="containbtn">
+          
+          <AddCart/>
+          <div>
+          {isCartOpen && <CartDropdown />}
+          </div>
+          <button className="navbar-toggle" onClick={toggleMenu}>
+            {open ? <HiX size={35} /> : <HiMiniBars3CenterLeft size={35} />}
+          </button>
+          </div>
+          
+          
+          </div>
+        </div>
+      ) : (
     <nav className="navbar">
      <div className="nav">
       <div className='logodiv' >
@@ -73,7 +137,7 @@ const Nav = () => {
             Contact
           </Link>
           </div>
-          {currentUser ? (
+          {currentUser? (
             <Link onClick={signOutUser} style={linkStyleSign}>
               {' '}
               Sign Out{' '}
@@ -90,6 +154,7 @@ const Nav = () => {
           </div>
       
           </nav>
+          )}
           
         </>
 

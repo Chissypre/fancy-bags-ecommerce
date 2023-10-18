@@ -4,14 +4,16 @@
     
 }
 
+
 .products-container .box {
- border:.1rem solid rgba(0,0,0,.1);
-  border-radius: .5rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem; 
   text-align: center;
   position: relative;
   overflow: hidden;
   background:#f9f9f9;
-   flex:1 1 30rem;  
+   flex:1 1 30rem; 
+   
 
 
 }
@@ -22,7 +24,7 @@
 
  .products-container .box img{
   height:10rem; 
-  filter:drop-shadow(0 .5rem 1rem rgba(0,0,0,.1));
+ /*  filter:drop-shadow(0 .5rem 1rem rgba(0,0,0,.1)); */
   align-items: center;
 }
 
@@ -38,7 +40,7 @@
 
  .products-container .box .content .price{
   color:var(--MAIN);
-  font-size: 1.5rem;
+  font-size:  1.8rem;
   font-weight: bolder;
   padding:.5rem 0;
 }

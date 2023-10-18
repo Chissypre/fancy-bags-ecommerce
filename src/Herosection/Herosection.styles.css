@@ -4,22 +4,26 @@
   display: flex;
   background-color: #244d4d;
   max-height: 700px;
+  overflow: hidden;
+  max-width: 100%;
  
 }
 .home .slide{
   background-color: pink;
   max-width: 700px;
+  max-width: 100%;
   max-height: 700px;
   flex:1 1 10rem; 
   align-items: center;
   flex-wrap: wrap;
   gap:1.5rem;
   padding:2% 3%;
-  height:clamp(50%, 75%, 100%);
-  width:clamp(50%, 75%, 100%);
+  overflow: hidden;
+  
 }
  .slide .content{
   animation:fade 1s ease-in-out;
+  max-width: 100%;
 }
 @keyframes fade{
   from{
@@ -33,20 +37,17 @@
   }
   .home .slide .content span{
     font-size: 1rem;
-    color:var(--MAIN);
-    font-size:clamp(.5rem, 1rem, 1rem); 
+    color:var(--MAIN); 
   }
   
   .home  .slide .content h3{
     font-size: 3rem;
     color:var(--MAIN);
-    font-size:clamp(1.5rem, 2.5rem, 3rem); 
   
   }
   
   .home  .slide .content p{
     font-size: 1rem;
-    font-size:clamp(1.2rem, 1.4rem, 1.5rem); 
     color:var(--MAIN);
     padding:.5rem 0;
   }
@@ -73,6 +74,18 @@
   .home .image{
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 20px;
+    margin-right:0;
   }
-  
+  @media (max-width: 1078px) {
+    .home  .slide .content h3{
+      font-size: 2.2rem;
+      color:var(--MAIN);
+    
+    }
+    .home .image{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      width: 55%;
+    }
+  }

@@ -9,17 +9,14 @@
    background-color: #ffffff; 
   z-index: 99;
   width: 100%;
-  margin-bottom: 0;
-  
+  margin-bottom: 0; 
 }
   
  .nav{
-
   display: flex;
   margin: 0 auto;
  }
- 
-  .nav a{
+ .nav a{
     text-decoration: none;
     font-size:1.3rem;
     font-weight: 700;
@@ -28,16 +25,12 @@
     list-style: none;
     padding: 0 20px;
     position: relative;
-    z-index: 999;
-   
-  
-    
+    z-index: 999; 
   }
   
   .nav a:hover,
   .nav  a.active{
     color:#40867b;
-  
   }
   
   .nav a.active::after,
@@ -45,42 +38,93 @@
     content: "";
     width: 30%;
     height: 2px;
-    background: #40867b;;
+    background: #40867b;
     position: absolute;
     bottom: -4px;
     left: 20px;
   }
  
-  .nav2 a{
-    text-decoration: none;
-    font-size:1.3rem;
-    font-weight: 700;
-    color: #2D2D2D;
-    transition: 0.3s ease;
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
-    z-index: 999;
-  
-    
-  }
-  
-  .nav2 a:hover,
-  .nav2  a.active{
-    color:#40867b;
-  
-  }
-  
-  .nav2 a.active::after,
-  .nav2 a:hover::after{
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: #40867b;;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
-  }
+ 
  .logodiv{
   padding: 0 30px;
  }
+ 
+      
+ @media (max-width: 831px) {
+ .navbar .nav a{
+    display:none; 
+  }
+  .mobilehead{
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999;
+    background-color: #ffffff;
+    justify-content: space-between;
+    display: flex;
+    padding-bottom: 10px;
+  
+   }
+   .mbheader{
+    margin-left: 10px;
+   }
+    .containbtn{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    margin-right: 15px;
+  } 
+   .navbar-toggle{
+    color: #40867b;
+    align-items: center;
+    display: flex;
+    border: inherit;
+    background-color: #ffffff;
+  } 
+  
+  .mobile-nav{
+    position: relative;
+  }
+  
+  .active{
+   background-color: rgb(253, 243, 244); 
+   height: 27rem;
+   width: 35%;
+   z-index:2;
+   left: 0;
+   position: absolute;
+   transition: left 0.3s;
+   flex-direction: column;
+   justify-content:right;
+display: flex;
+
+  }
+  .mobile-nav-link{
+    text-decoration: none;
+    font-size:1.3rem;
+    font-weight: 600;
+    color: #40867b;
+    transition: 0.3s ease;
+    list-style: none;
+    padding: 15px 0;
+    overflow: hidden;
+    margin-left: 60px;
+    
+   
+
+  }
+    } 
+    @media (max-width: 520px) {
+       .active{
+         padding-right: 50px;
+         width: 50%;
+       }
+      }
+    @media (max-width: 370px) {
+       .active{
+         padding-right: 50px;
+         width: 70%;
+       }
+      }

@@ -22,17 +22,32 @@
       width: 23%;
     }
   
-    .quantity {
-      display: flex;
+    
+      
+    
   
       .arrow {
         cursor: pointer;
+        display: flex;
+        color:#40867b;
+        justify-content: center;
+        
+      }
+      .arrowsign{
+        height: 25px;
+        width: 25px;
+        margin: 0 20px;
+        color:#40867b;
+        justify-content: center;
+    
       }
   
       .value {
-        margin: 0 10px;
+       margin: 0 20px;
+        font-size: 1rem;
+        color: #40867b;
       }
-    }
+    
   
     .remove-button {
       padding-left: 12px;
