@@ -27,10 +27,20 @@
       margin-top: auto;
     }
   }
+  @media (max-width: 990px) {
+    .cart-dropdown-container{
+      width: 300px;
+    }
+  }
   @media (max-width: 831px) {
 
     .cart-dropdown-container {
       top: 45px;
       right: 10px;
+    }
+  }
+  @media (max-width: 607px) {
+    .cart-dropdown-container{
+      width: 280px;
     }
   }

@@ -1,10 +1,12 @@
+
 .checkout-container {
-    width: 70%;
+    width:100%;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 60px auto 0;
+    margin: 60px auto ;
+    padding: 40px ;
   
     .checkout-header {
       width: 100%;
@@ -15,10 +17,14 @@
   
       .header-block {
         text-transform: capitalize;
-        width: 50%;
+        width: 70%;
+        margin: 0 20px;
   
         &:last-child {
           width: 8%;
+        }
+        .nbsp{
+          white-space: nowrap;
         }
       }
     }
@@ -29,3 +35,10 @@
       font-size: 36px;
     }
   }
+  @media (max-width: 468px) {
+    .total {
+      font-size: 30px;
+    }
+    }
+  
+  
