@@ -105,7 +105,9 @@
     } 
     }
    @media (max-width: 721px) {
-    
+    .home{
+      min-height: 1000px;
+    }
     .home .slide{
      max-width: 100%;
     min-height: 500px;
@@ -113,6 +115,26 @@
      }
      .home .image{
       width: 100%;
+       } 
+    
+    }
+   @media (max-width: 607px) {
+   .home{
+    overflow-x: hidden;
+   }
+     .home .image{
+      width: 97%;
+      height: auto;
+      overflow: hidden;
+       } 
+    
+    }
+   @media (max-width: 392px) {
+   
+     .home .image{
+      width: 95%;
+      height: auto;
+      overflow: hidden;
        } 
     
     }
