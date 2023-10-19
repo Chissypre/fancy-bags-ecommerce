@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
     
       <div className="content">
           <h3 className="productName">{name}</h3>
-          <small>$</small><span className="price">{price}</span><br/> <span className="past-price">$150.99</span>
+          <small>₦</small><span className="price">{price}</span><br/> <span className="past-price">₦15000.99</span>
           <div className="cardstyle">
                <RatingStars rating={rating}  />  
                </div>  

@@ -50,10 +50,21 @@
   }
 }
 @media (max-width:432px) {
+  .footer .box-container{
+    flex-direction: column;
+    min-height: 650px;
+    
+  }
+  .footer .box-container .box{
+    width: 100%;
+    flex: 0;
+  }
+
   .footer .box-container .box h3{
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .footer .box-container .credit{
   font-size: 1rem;
+  width: 100%;
 }
 }

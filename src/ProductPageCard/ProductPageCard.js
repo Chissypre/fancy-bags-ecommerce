@@ -63,7 +63,7 @@ const ProductPageCard = ({ product }) => {
         <br />
     <span class="quantity">Instock: {instock}</span>
   <br />
-    <small>$</small><span className="price">{price}</span> <span className="past-price">150.99</span>
+    <small>₦</small><span className="price">{price}</span> <span className="past-price">₦15000.99</span>
     
                <RatingStars rating={rating}  />  
               
