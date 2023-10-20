@@ -35,9 +35,6 @@ const Footer = () => {
           <Link  to="/Checkout">
             My Orders
           </Link>
-          <Link to="/Newsletter">
-            Newsletter
-          </Link>
         </div>
 
         <div class="box">
