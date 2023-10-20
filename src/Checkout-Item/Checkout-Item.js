@@ -34,11 +34,14 @@ const CheckoutItem = ({ cartItem }) => {
       <div className='checkout-item-container'>
       <div className='image-container'>
         <img src={imgSrc} alt={`${name}`} />
-      </div>
-      <span className='name'> {name} 
+        <>
+        <span className='name'> {name} 
       <br />
       ₦{price}
       </span>
+        </>
+      </div>
+     
         <span className='arrow' onClick={removeItemHandler}>
         &#10094;
         </span>

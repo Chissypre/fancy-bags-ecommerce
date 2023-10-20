@@ -92,14 +92,13 @@
    background-color: rgb(253, 243, 244); 
    height: 27rem;
    width: 35%;
-   z-index:2;
+   z-index: 1000;
    left: 0;
-   position: absolute;
+   position:fixed;
    transition: left 0.3s;
    flex-direction: column;
    justify-content:right;
-display: flex;
-
+   display: flex; 
   }
   .mobile-nav-link{
     text-decoration: none;
@@ -111,6 +110,7 @@ display: flex;
     padding: 15px 0;
     overflow: hidden;
     margin-left: 60px;
+    
     
    
 
