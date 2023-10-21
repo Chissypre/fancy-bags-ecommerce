@@ -48,8 +48,18 @@
  .logodiv{
   padding: 0 30px;
  }
- 
-      
+ @media (max-width: 1078px) {
+ .navbar .nav a{
+    font-size: 1.1rem; 
+    padding: 0 12px;
+  }
+}    
+  @media (max-width: 876px) {
+ .navbar .nav a{
+    font-size: 1rem; 
+    padding: 0 10px;
+  }
+}   
  @media (max-width: 831px) {
  .navbar .nav a{
     display:none; 
@@ -65,7 +75,7 @@
     justify-content: space-between;
     display: flex;
     padding-bottom: 10px;
-  
+  overflow-x: hidden;
    }
    .mbheader{
     margin-left: 10px;
@@ -86,19 +96,24 @@
   
   .mobile-nav{
     position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    z-index: 1000;
   }
   
   .active{
    background-color: rgb(253, 243, 244); 
-   height: 27rem;
+   height: 35rem;
    width: 35%;
-   z-index: 1000;
-   left: 0;
+   z-index: 999;
+   left:0;
    position:fixed;
    transition: left 0.3s;
    flex-direction: column;
    justify-content:right;
    display: flex; 
+   padding:20px 0;
+   overflow: hidden;
   }
   .mobile-nav-link{
     text-decoration: none;
@@ -107,7 +122,7 @@
     color: #40867b;
     transition: 0.3s ease;
     list-style: none;
-    padding: 15px 0;
+    padding:15px 20px;
     overflow: hidden;
     margin-left: 60px;
     

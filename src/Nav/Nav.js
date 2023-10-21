@@ -19,7 +19,7 @@ const Nav = () => {
   const { isCartOpen } = useContext(CartContext);
   const linkStyle = {
     textDecoration: 'none',
-    fontSize: '1.3rem',
+    fontSize: '1.1rem',
     fontWeight: 700,
     color: '#2D2D2D',
     transition: '0.3s ease',
@@ -52,23 +52,36 @@ const Nav = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  const getFirstName = (displayName) => {
+    if (displayName) {
+      const parts = displayName.split(' ');
+      return parts[0];
+    }
+    return '';
+  };
 
 
   return (
     <>
      {isMobile ? (
         <div className={`mobile-nav ${open ? 'active' : ''}`}>
+          
+          
+          
           {currentUser ? (
-            <Link onClick={signOutUser} style={{textDecoration:"none", color:"#2D2D2D", alignItems:"center",fontWeight:"700", marginTop:'60px', marginLeft:'60px', fontSize:'1.3rem'}}>
+            <Link onClick={signOutUser} style={{textDecoration:"none", color:"#244d4d", alignItems:"center",fontWeight:"700", marginTop:'60px', marginLeft:'60px', fontSize:'1.1rem', padding:"20px"}}>
               {' '}
-              Sign Out{' '}
+             Welcome, {getFirstName(currentUser.displayName)}!
             </Link>
+            
           ) : (
           <Link to="/auth" style={{textDecoration:"none", color:"#244d4d", alignItems:"center", fontWeight:"700", marginLeft:'60px', marginTop:'60px', fontSize:'1.3rem'}}>
             Sign In
           </Link>
              )} 
-          
+           {currentUser &&<Link className="mobile-nav-link" onClick={signOutUser} >
+             Sign out
+            </Link>}
             <Link className="mobile-nav-link" to="/" onClick={toggleMenu}>
               Home
             </Link>
@@ -84,6 +97,9 @@ const Nav = () => {
             <Link className="mobile-nav-link" to="/Contact" onClick={toggleMenu}>
               Contact
             </Link>
+            
+           
+            
        <div className="mobilehead">
           <div className="mbheader">
             <Link to="/">
@@ -136,11 +152,16 @@ const Nav = () => {
           <Link  to="/Contact">
             Contact
           </Link>
+
+          {currentUser &&<Link  onClick={signOutUser} >
+              Sign out
+            </Link>}
           </div>
+
           {currentUser? (
             <Link onClick={signOutUser} style={linkStyleSign}>
               {' '}
-              Sign Out{' '}
+              Welcome, {getFirstName(currentUser.displayName)}!
             </Link>
           ) : (
           <Link to="/auth" style={linkStyle}>
