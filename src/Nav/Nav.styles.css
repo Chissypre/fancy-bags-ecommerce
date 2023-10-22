@@ -103,8 +103,8 @@
   
   .active{
    background-color: rgb(253, 243, 244); 
-   height: 35rem;
-   width: 35%;
+   height: 30rem;
+   width: 40%;
    z-index: 999;
    left:0;
    position:fixed;
@@ -122,9 +122,9 @@
     color: #40867b;
     transition: 0.3s ease;
     list-style: none;
-    padding:15px 20px;
+    padding:10px 10px;
     overflow: hidden;
-    margin-left: 60px;
+    margin-left: 10px;
     
     
    
@@ -133,13 +133,13 @@
     } 
     @media (max-width: 520px) {
        .active{
-         padding-right: 50px;
-         width: 50%;
+         width: 60%;
        }
       }
-    @media (max-width: 370px) {
+    @media (max-width: 390px) {
        .active{
-         padding-right: 50px;
-         width: 70%;
+         width: 55%;
+         overflow-y: hidden; 
        }
-      }
+       
+    }

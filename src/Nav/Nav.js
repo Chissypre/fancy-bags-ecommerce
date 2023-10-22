@@ -24,7 +24,7 @@ const Nav = () => {
     color: '#2D2D2D',
     transition: '0.3s ease',
     listStyle: 'none',
-    padding: '0 20px',
+    padding: '0 10px',
     position: 'relative',
     zIndex: 999,
   };
@@ -69,13 +69,13 @@ const Nav = () => {
           
           
           {currentUser ? (
-            <Link onClick={signOutUser} style={{textDecoration:"none", color:"#244d4d", alignItems:"center",fontWeight:"700", marginTop:'60px', marginLeft:'60px', fontSize:'1.1rem', padding:"20px"}}>
+            <Link onClick={signOutUser} style={{textDecoration:"none", color:"#244d4d", alignItems:"center",fontWeight:"700", marginTop:'60px', marginLeft:'20px', fontSize:'1.1rem', padding:"10px"}}>
               {' '}
              Welcome, {getFirstName(currentUser.displayName)}!
             </Link>
             
           ) : (
-          <Link to="/auth" style={{textDecoration:"none", color:"#244d4d", alignItems:"center", fontWeight:"700", marginLeft:'60px', marginTop:'60px', fontSize:'1.3rem'}}>
+          <Link to="/auth" style={{textDecoration:"none", color:"#244d4d", alignItems:"center", fontWeight:"700", marginLeft:'20px', marginTop:'60px', fontSize:'1.3rem'}}>
             Sign In
           </Link>
              )} 
