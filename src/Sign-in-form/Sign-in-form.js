@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { FaSpinner } from 'react-icons/fa';
 
 import FormInput from '../Form-input/Form-input';
 import Button from '../Button/Button';
@@ -19,24 +20,29 @@ const defaultFormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
+  const [isLoading, setIsLoading] = useState(false);
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
   const signInWithGoogle = async () => {
     await signInWithGooglePopup();
-   
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // Set isLoading to true when the form is submitting
+    setIsLoading(true);
 
     try {
       await signInAuthUserWithEmailAndPassword(email, password);
       resetFormFields();
     } catch (error) {
       console.log('user sign in failed', error);
+    } finally {
+      // Set isLoading back to false after submission or error
+      setIsLoading(false);
     }
   };
 
@@ -69,9 +75,11 @@ const SignInForm = () => {
           value={password}
         />
         <div className='buttons-container'>
-          <Button type='submit'>Sign In</Button>
-          <Button buttonType='google' type='button' onClick={signInWithGoogle}>
-            Sign In With Google
+          <Button type='submit' disabled={isLoading}>
+            {isLoading ? <FaSpinner className="spinner-icon" /> : 'Sign In'}
+          </Button>
+          <Button buttonType='google' type='button' onClick={signInWithGoogle} >
+          Sign in with Goggle
           </Button>
         </div>
       </form>

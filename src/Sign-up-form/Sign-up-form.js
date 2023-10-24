@@ -1,13 +1,11 @@
-import { useState } from 'react';
-
+import React, { useState } from 'react';
+import { FaSpinner } from 'react-icons/fa'; // Import the spinner icon
 import FormInput from '../Form-input/Form-input';
 import Button from '../Button/Button';
-
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from '../utils/firebase/firebase.utils';
-
 import './Sign-up-form.styles.scss';
 
 const defaultFormFields = {
@@ -20,6 +18,7 @@ const defaultFormFields = {
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
+  const [isLoading, setIsLoading] = useState(false); 
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -33,12 +32,10 @@ const SignUpForm = () => {
       return;
     }
 
-    try {
-      const { user } = await createAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
+    setIsLoading(true); // Set isLoading to true when form is submitting
 
+    try {
+      const { user } = await createAuthUserWithEmailAndPassword(email, password);
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (error) {
@@ -47,12 +44,13 @@ const SignUpForm = () => {
       } else {
         console.log('user creation encountered an error', error);
       }
+    } finally {
+      setIsLoading(false); // Set isLoading back to false after submission or error
     }
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-
     setFormFields({ ...formFields, [name]: value });
   };
 
@@ -96,7 +94,10 @@ const SignUpForm = () => {
           name='confirmPassword'
           value={confirmPassword}
         />
-        <Button type='submit'>Sign Up</Button>
+
+        <Button type='submit' disabled={isLoading}>
+          {isLoading ? <FaSpinner className="spinner-icon" /> : 'Sign Up'}
+        </Button>
       </form>
     </div>
   );
