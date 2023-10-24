@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fancy-bags-ecommerce/static/css/main.9d2cd914.css",
-    "main.js": "/fancy-bags-ecommerce/static/js/main.907432e9.js",
+    "main.js": "/fancy-bags-ecommerce/static/js/main.31bcfbfd.js",
     "static/media/BAG_peach.png": "/fancy-bags-ecommerce/static/media/BAG_peach.ea6205fe3fb49b2f447e.png",
     "static/media/BAG3_pinks.png": "/fancy-bags-ecommerce/static/media/BAG3_pinks.b56803ec1c18e8148622.png",
     "static/media/BAGS_purple.png": "/fancy-bags-ecommerce/static/media/BAGS_purple.48fb5b1f51111ee864fd.png",
@@ -19,10 +19,10 @@
     "static/media/LogoHead2.svg": "/fancy-bags-ecommerce/static/media/LogoHead2.5f25135e33afb11c60a51ffa67a4e4cd.svg",
     "index.html": "/fancy-bags-ecommerce/index.html",
     "main.9d2cd914.css.map": "/fancy-bags-ecommerce/static/css/main.9d2cd914.css.map",
-    "main.907432e9.js.map": "/fancy-bags-ecommerce/static/js/main.907432e9.js.map"
+    "main.31bcfbfd.js.map": "/fancy-bags-ecommerce/static/js/main.31bcfbfd.js.map"
   },
   "entrypoints": [
     "static/css/main.9d2cd914.css",
-    "static/js/main.907432e9.js"
+    "static/js/main.31bcfbfd.js"
   ]
 }
