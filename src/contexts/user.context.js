@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useReducer, useEffect } from 'react';
 import 'firebase/auth';
 import 'firebase/firestore';
 import {
@@ -6,34 +6,46 @@ import {
   createUserDocumentFromAuth,
 } from '../utils/firebase/firebase.utils';
 import { getDoc } from 'firebase/firestore';
-export const UserContext = createContext({
-  setCurrentUser: () => null,
+
+const initialState = {
   currentUser: null,
-});
+};
 
+const userReducer = (state, action) => {
+  switch (action.type) {
+    case 'SET_CURRENT_USER':
+      return { ...state, currentUser: action.payload };
+    case 'CLEAR_CURRENT_USER':
+      return { ...state, currentUser: null };
+    default:
+      return state;
+  }
+};
+
+export const UserContext = createContext();
 export const UserProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
-  const value = { currentUser, setCurrentUser };
+  const [state, dispatch] = useReducer(userReducer, initialState);
 
- 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener(async (user) => {
       if (user) {
         createUserDocumentFromAuth(user);
-        
+
         if (user.displayName) {
-          setCurrentUser(user);
+          dispatch({ type: 'SET_CURRENT_USER', payload: user });
         } else {
-         
+          // GET USER FROM FIRESTORE DATABASE
           const userDocRef = await createUserDocumentFromAuth(user);
-          console.log(userDocRef)
           try {
             const userSnapshot = await getDoc(userDocRef);
-            
+            console.log(userSnapshot)
+
+           
             if (userSnapshot.exists) {
               const userData = userSnapshot.data();
-              
-              setCurrentUser(userData)
+              console.log(userData)
+
+              dispatch({ type: 'SET_CURRENT_USER', payload: userData });
             } else {
               console.log('Document does not exist.');
             }
@@ -42,11 +54,14 @@ export const UserProvider = ({ children }) => {
           }
         }
       } else {
-        setCurrentUser(null);
+        dispatch({ type: 'CLEAR_CURRENT_USER' });
       }
     });
 
     return unsubscribe;
   }, []);
-  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+
+  return (
+    <UserContext.Provider value={{ ...state, dispatch }}>{children}</UserContext.Provider>
+  );
 };

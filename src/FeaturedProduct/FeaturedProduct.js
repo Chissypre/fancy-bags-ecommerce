@@ -74,6 +74,7 @@ const FeaturedProduct = () => {
         <div className="row" key={index}>
           <div className="big-image">
             <img src={getBagImage(bag)} alt={`BAG${bag.id}`} />
+            
           </div>
           <div className="content">
             <h3>{bag.name}</h3>
@@ -102,6 +103,7 @@ const FeaturedProduct = () => {
             <span className="past-price">₦15000.99</span>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Button style={{ margin:'20px 0'}} onClick={() => addProductToCart(bag)}>add to cart</Button>
+
           </div>
         </div>
       ))}
@@ -129,7 +131,9 @@ const FeaturedProduct = () => {
         '#d3346f': BAG3F3,
       },
     }[bag.name][bag.selectedColor];
+    
   }
+  
 };
 
 export default FeaturedProduct;

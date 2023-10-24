@@ -8,12 +8,12 @@ import { FiPlusSquare} from "react-icons/fi";
 const CheckoutItem = ({ cartItem }) => {
   const { name, imgSrc, price, quantity } = cartItem;
 
-  const { clearItemFromCart, addItemToCart, removeItemToCart } =
+  const { clearItemFromCart, addItemToCart, removeItemFromCart } =
     useContext(CartContext);
 
   const clearItemHandler = () => clearItemFromCart(cartItem);
   const addItemHandler = () => addItemToCart(cartItem);
-  const removeItemHandler = () => removeItemToCart(cartItem);
+  const removeItemHandler = () => removeItemFromCart(cartItem);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
 
  
