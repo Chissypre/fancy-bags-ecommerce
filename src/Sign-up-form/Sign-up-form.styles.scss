@@ -6,6 +6,19 @@
     h2 {
       margin: 10px 0;
     }
+    
+.spinner-icon {
+  
+  animation: spin 1s linear infinite;
+  color: #ffffff;
+  font-size: 24px; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
   }
 
   @media (max-width: 600px) {
